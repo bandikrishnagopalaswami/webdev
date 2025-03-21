@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .back,.next{
+      padding:10px 7px 10px 7px;
+      border-radius:3px;
+      border-width:1px;
+      border-style:solid;
+    }
+    .back{
+      margin-right:5px;
+    }
+    .next{
+      margin-left:5px;
+    }
+    a{
+      margin:5px;
+    }
+    .stretch{
+      color:white;
+      background-color: rgb(8, 88, 8);
+      border-style:none;
+      font-size:16px;
+      padding:9px 12px 9px 12px;
+      font-weight:500;
+      margin-left: 50px;
+      transition: padding 0.5s;
+    }
+    .stretch:hover{
+      padding:20px 40px 20px 40px;
+    }
+    div{
+      margin-top:20px;
+    }
+    .one,.two,.three{
+      color:white;
+      background-color:rgb(8, 88, 8);
+      font-size:16px;
+      padding:5px 8px 5px 8px;
+      border-style: none;
+      margin-left:5px;
+      margin-right:5px;
+      transition:padding 0.20s,margin 0.20s;
+    }  
+    .one:hover,.two:hover,.three:hover{
+      padding-left:12px;
+      padding-right:12px;
+      margin-left:2px;
+      margin-right: 2px;
+    }
+  </style>
+</head>
+<body>
+  <button class="back">Back</button> 
+  <a href="https://www.google.co.in/">1</a>
+  <a href="https://www.google.co.in/">2</a>
+  <a href="https://www.google.co.in/">3</a>
+  <a href="https://www.google.co.in/">4</a>
+  <a href="https://www.google.co.in/">5</a>
+  <button class="next">Next</button>
+  <button class="stretch">Stretch</button>
+  <div>
+    <button class="one">One</button>
+    <button class="two">Two</button>
+    <button class="three">Three</button>
+  </div>
+</body>
+</html>
