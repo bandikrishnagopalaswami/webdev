@@ -18,3 +18,43 @@ header:hover{
 body{
   background-color: rgb(198, 241, 247);
 }
+.pattern:hover{
+  opacity:0.8;
+}
+.pattern:active{
+  opacity:0.6;
+}
+.home{
+  margin-left:200px;
+  margin-top:50px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  column-gap: 80px;
+  row-gap:60px;
+}
+.pattern{
+  width:100%;
+  border-style: solid;
+  border-radius:15px;
+  display: grid;
+  font-size: 15px;
+  grid-template-rows: 65% 35%;
+  border-width:1px;
+  background-color: rgba(13,158,13,0.2);
+  line-height: 20px;
+}
+.name-of-pattern{
+  border-style:none;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding-left:26px;
+  background-color:rgb(13,158,13);
+  padding-top: 15px;
+  padding-bottom:10px;
+  font-size: 17px;
+  color:white;
+  border-color:none;
+}
+.space{
+  padding-left: 40px;
+}

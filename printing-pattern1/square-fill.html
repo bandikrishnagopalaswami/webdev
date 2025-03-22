@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="dispayPattern(1)">1</button>
+  <button onclick="dispayPattern(2)">2</button>
+  <button onclick="dispayPattern(3)">3</button>
+  <button onclick="dispayPattern(4)">4</button>
+  <button onclick="dispayPattern(5)">5</button>
+  <button onclick="dispayPattern(6)">6</button>
+  <button onclick="dispayPattern(7)">7</button>
+  <button onclick="dispayPattern(8)">8</button>
+  <button onclick="dispayPattern(9)">9</button>
+  <p class="p1"></p>
+</body>
+<script>
+  function displayPattern(n){
+    let r=document.querySelector(".p3");
+    let q=0;
+    for(let i=1;i<=n;i++){
+      for(let j=1;j<=i;j++){
+        q+=`* `;
+      }
+      q+=`<br>`;
+    }
+    r.innerHTML=`${q}`;
+  }
+</script>
+</html>
