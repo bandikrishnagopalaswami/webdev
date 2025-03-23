@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container{
+                display: grid;
+                grid-template-columns: 870px 570px;
+            }
+            .grid-1{
+                margin-top: 0px;
+                width:100%;
+                height:725px;
+            }
+            .grid-2{
+                border:none;
+            }
+            .img{
+                width:100%;
+                height:100%;
+                object-fit:cover;
+            }
+            .pw-logo{
+                width:25%;
+                object-fit:contain;
+                margin-left:30px;
+                margin-top:40px;
+            }
+            h2{
+                margin-left:35px;
+                margin-top:50px;
+                width:60%;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:24px;
+            }
+            p{
+                margin-left: 35px;
+                color:grey;
+                margin-bottom:30px;
+                font-size:17.1px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            button:hover{
+                background-color: rgb(246, 74, 11);
+                color:white;
+                font-size:20px;
+                padding-top:15px;
+                padding-bottom:15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight:700;
+                border:none;
+                display: block;
+                cursor:pointer;
+                opacity: 0.59;
+                margin-top:25px;
+                border-radius:7px;
+                margin-left:35px;
+                padding-left:170px;
+                padding-right: 180px;
+            }
+            button{
+                background-color: rgb(246, 74, 11);
+                color:white;
+                font-size:20px;
+                padding-top:15px;
+                padding-bottom:15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight:700;
+                border:none;
+                display: block;
+                margin-top:25px;
+                border-radius:7px;
+                margin-left:35px;
+                padding-left:170px;
+                padding-right: 180px;
+            }
+            .label1{
+                margin-left:37px;
+                font-size:25px;
+            }
+            input{
+                border:none;
+                font-size:17px;
+                padding-top:15px;
+                padding-left:10px;
+                padding-right:10px;
+                outline:none;
+            }
+            hr{
+                width:455px;
+                margin-left:35px;
+            }
+            .grid-3{
+                width:49%;
+                padding:7px 10px 7px 10px;
+                border-color:grey;
+                border-style:solid;
+                border-width:1px;
+                border-radius:3px;
+                margin-left:100px;
+                display:grid;
+                grid-template-columns:30px 220px 30px;
+            }
+            .img1{
+                width:100%;
+                height:30px;
+                border-radius:30px;
+            }
+            .sign-in{
+                font-size:13px;
+                color:black;
+                font-weight:bold;
+                margin: 0px;
+                margin-left:10px;
+            }
+            .email{
+                font-size:13px;
+                margin: 0px;
+                margin-left:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="grid-1">
+                <img class="img" src="signin-banner.svg">
+            </div>
+            <div class="grid-2">
+                <img class="pw-logo"src="PWSkills-main.png">
+                <h2>Get Onboard and jumpstart your career!</h2>
+                <p>Please enter your phone number to login/register</p>
+                <label class="label1" for="mobile">IN +91 |</label>
+                <input type="phone" placeholder="Enter your mobile number"><hr>
+                <button>Send OTP</button>
+                <p style="margin-left:230px;margin-top:35px;">OR</p>
+                <div class="grid-3">
+                    <img class="img1" src="channels4_profile.jpg">
+                    <div>
+                    <p class="sign-in">Sign in as Krishna Gopala Swami</p>
+                    <p class="email">krishnagopalswami183@gmail.com</p>
+                    </div>
+                    <img class="img1" src="download.jpeg">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
