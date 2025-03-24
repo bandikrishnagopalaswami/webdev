@@ -1,0 +1,101 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>gopal</title>
+    <style>
+      .js-subscribe-button{
+        background-color:black;
+        color:white;
+        font-weight:bold;
+        border-radius: 25px;
+        padding:10px 18px 10px 18px;
+        margin-left:20px;
+      }
+      
+      .p1,.p2,.p3{
+        display:inline;
+        margin-right: 10px;
+      }
+      div{
+        margin-top:10px;
+        margin-left:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button class='js-subscribe-button'onclick="subscribe()">subscribe</button>
+    <p>Rock Paper Scissors</p>
+    <button onclick="rockpaperscissor('rock')">Rock</button>
+    <button onclick="rockpaperscissor('paper')">Paper</button>
+    <button onclick="rockpaperscissor('scissor')">scissors</button>
+    <p class="p4"></p>
+    <div>
+      <p class="p1">wins:0</p>
+      <p class="p2">loses:0</p>
+      <p class="p3">ties:0</p>
+    </div>
+    <p>Amazon Shipping Calculator</p>
+    <p>orders under $40=+$10 shipping</p>
+    <p>orders over $40=FREE shipping</p>
+    <input placeholder="enter the value" onkeydown="let keyevent=event.key
+    if(event.key==='Enter'){
+      calculatefunction();
+    }">
+    <button onclick="calculatefunction()"class="calculate-button">Calculate</button>
+    <script>
+      let winscore=0,tiescore=0,loseScore=0;
+      function calculatefunction(){
+        let r=document.querySelector("input");
+        let h3=Number(r.value);
+        if(r.value<=40){
+          h3+=10;
+          r.value=`${h3}`;
+        }
+        else{
+          r.value=`${h3}`;
+        }
+      }
+      function subscribe(){
+        const buttonElement=document.querySelector('.js-subscribe-button');
+        if(buttonElement.innerText=='subscribe'){
+          buttonElement.innerText='subscribed';
+        }
+        else{
+          buttonElement.innerText='subscribe';
+        }
+      }
+      function rockpaperscissor(p1){
+        let p2=Math.random();
+        let comMove='',moves=document.querySelector('.p4');
+        if(p2>=0 && p2<=1/3){
+          comMove='rock';
+        }
+        else if(p2>1/3 && p2<=2/3){
+          comMove='paper';
+        }
+        else{
+          comMove='scissor';
+        }
+        if(comMove===p1){
+          let tieElement=document.querySelector('.p3');
+          tiescore++;
+          moves.innerHTML=`your move ${p1} computer move ${comMove}`;
+          tieElement.innerHTML=`ties:${tiescore}`;
+        }
+        else if((p1==='rock' && comMove==='scissor')||(p1==='paper' && comMove==='rock')||(p1==='scissor' && comMove==='paper')){
+          winscore++;
+          moves.innerHTML=`your move ${p1} computer move ${comMove}`;
+          let winElement=document.querySelector('.p1');
+          winElement.innerHTML=`wins:${winscore}`;
+        }
+        else{
+          loseScore++;
+          moves.innerHTML=`your move ${p1} computer move ${comMove}`;
+          let loseElement=document.querySelector('.p2');
+          loseElement.innerHTML=`loses:${loseScore}`;
+        }
+      }
+    </script>
+  </body>
+</html>
