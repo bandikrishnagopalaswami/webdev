@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div{
+        margin-top:10px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <button class="button1" onclick="displayfunction()">9a</button>
+    <button class="button2" onclick="changefunction()">9b</button>
+    <div>
+      <button class="head1" onclick="head2()">heads</button>
+      <button class="tail1" onclick="tail2()">tails</button>
+      <p></p>
+    </div>
+    <script>
+      function displayfunction(){
+        let x=document.querySelector('.button1');
+        console.log(x.innerHTML);
+      }
+      function changefunction(){
+        let x=document.querySelector('.button2');
+        x.innerHTML=`9b done!`;
+      }
+      function head2(){
+        let x=document.querySelector('p');
+        x.innerHTML=`you chose:heads`;
+      }
+      function tail2(){
+        let x=document.querySelector('p');
+        x.innerHTML=`you chose:tails`;
+      }
+    </script>
+  </body>
+</html>
