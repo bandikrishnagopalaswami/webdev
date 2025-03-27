@@ -1,0 +1,3 @@
+->sql is a database query language in RDBMS MODEL
+->CRUD operations on tables and Databases are performed using SQL 
+->float,int,varchar,char,date,time,date&time are common datatypes that are supported in any sql softwares like MySQL,SQL Server,PostGRE SQL
