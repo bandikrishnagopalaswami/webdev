@@ -32,9 +32,6 @@
     month=Number(month);
     date=Number(date);
     ans=(year-1)+((year-1)/4)+date;
-    if((month.length<2 || month.length>2)||(date<0 || date>31 ) ||(month==2 && year%4!=0 && date>28)){
-      res.innerHTML=`INVALID INPUT`;
-    }
     let flag=0;
     if(year%4==0){
       flag=1;
@@ -48,7 +45,12 @@
       }
     }
     console.log(ans);
-    res.innerHTML=`${a1[ans%7]}`;
+    if((month.length<2 || month.length>2)||(date<0 || date>31 ) ||(month==2 && year%4!=0 && date>28)){
+      res.innerHTML=`INVALID INPUT`;
+    }
+    else{
+      res.innerHTML=`${a1[ans%7]}`;
+    }
   }
 </script>
 </html>
