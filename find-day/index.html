@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAY DETECTOR</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  </style>
+</head>
+<body>
+  <header>
+    Welcome to day finder
+  </header>
+  <div class="container">
+    <h1 class="day-finder">Day Finder</h1>
+    <label class="enter-date">Enter a date:</label>
+    <input  class="input-date" type="text" placeholder="DD-MM-YYYY">
+    <button class="find-day"
+    onclick="find_day()">Find Day</button>
+    <p class="answer"></p>
+  </div>
+</body>
+<script>
+  function find_day(){
+    let a1=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    let x=document.querySelector(".input-date");
+    let res=document.querySelector(".answer");
+    let year=x.value.substring(8,10),month=x.value.substring(3,5),date=x.value.substring(0,2);
+    let a2=[3,0,3,2,3,2,3,3,2,3,2,3];
+    year=Number(year);
+    month=Number(month);
+    date=Number(date);
+    ans=(year-1)+((year-1)/4)+date;
+    if((month.length<2 || month.length>2)||(date<0 || date>31 ) ||(month==2 && year%4!=0 && date>28)){
+      res.innerHTML=`INVALID INPUT`;
+    }
+    let flag=0;
+    if(year%4==0){
+      flag=1;
+    }
+    for(let i=0;i<month-1;i++){
+      if(i==1 && flag==1){
+        ans++;
+      }
+      else{
+        ans+=a2[i];
+      }
+    }
+    console.log(ans);
+    res.innerHTML=`${a1[ans%7]}`;
+  }
+</script>
+</html>

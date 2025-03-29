@@ -1,0 +1,58 @@
+header{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(9, 155, 246);
+  color:white;
+  display: flex;
+  flex-direction:row;
+  border-style:none;
+  padding:20px 20px 20px 25px;
+  border-radius: 5px;
+  font-size:25px;
+}
+.container{
+  position:relative;
+  left:575px;
+  top:80px;
+  border-style:solid;
+  border-color:grey;
+  width: fit-content;
+  border-width:1px;
+  border-radius: 10px;
+  padding:20px 30px 30px 30px;
+}
+.day-finder{
+  margin:0px;
+}
+.enter-date{
+  display:block;
+  font-size: 18px;;
+  padding:15px 10px 10px 0px;
+}
+.input-date{
+  display:block;
+  padding:10px 0px 10px 10px;
+  font-size: 18px;
+  border-radius:5px;
+  border-width:1px;
+}
+.find-day{
+  background-color: rgb(9, 155, 246);
+  color:white;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 19px;
+  margin-top: 15px;
+  padding:12px 90px 10px 68px;
+  transition: opacity 0.30s;
+}
+.find-day:hover{
+  opacity: 0.9;
+}
+.find-day:active{
+  opacity:0.6;
+}
+.answer{
+  padding-left: 10px;
+  margin-bottom:0px;
+  font-size:20px;
+}
