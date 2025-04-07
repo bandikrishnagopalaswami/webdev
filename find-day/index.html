@@ -28,12 +28,17 @@
     let res=document.querySelector(".answer");
     let year=x.value.substring(8,10),month=x.value.substring(3,5),date=x.value.substring(0,2);
     let a2=[3,0,3,2,3,2,3,3,2,3,2,3];
+    let century_19=0;
+    if(Number(x.value.substring(6,8))<20 && Number(x.value.substring(6,8))>=19){
+      century_19=1;
+    }
     year=Number(year);
     month=Number(month);
     date=Number(date);
-    ans=(year-1)+((year-1)/4)+date;
+    ans=(year-1)+(Math.floor((year-1)/4))+date+century_19;
+    console.log(ans);
     let flag=0;
-    if(year%4==0){
+    if((year%4==0 && year%100!=0) || (year%400==0)){
       flag=1;
     }
     for(let i=0;i<month-1;i++){

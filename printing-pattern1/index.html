@@ -10,148 +10,76 @@
   <header>
     <h1>Welcome to Pattern Printing</h1>
   </header>
-  <div class="home">
+  <div class="container">
     <div class="pattern">
-      <pre>
-        * * * * *
-        *       *
-        *       *
-        *       *
-        * * * * *
-      </pre>
-      <div class="name-of-pattern">
-        Square Hollow Pattern
-      </div>
+      <p class="size_pattern"onclick="print_pattern()">
+*<br>
+* * <br>
+* * * <br>
+* * * * <br>
+</p><button class="size" onclick="print_sized_pattern(5)">5</button>
+<button class="size" onclick="print_sized_pattern(6)">6</button>
+<button class="size" onclick="print_sized_pattern(7)">7</button>
+<button class="size" onclick="print_sized_pattern(8)">8</button>
+<p class="code"></p>
     </div>
-    <div class="pattern">
-      <pre>
-        * * * * *
-        * * * * *
-        * * * * *
-        * * * * *
-        * * * * *
-      </pre>
-      <div class="name-of-pattern">
-        <a href="square-fill.html" target="_blank"> Square Fill Pattern</a>
-      </div>
-    </div>
-    <div class="pattern">
-      <pre>
-        * 
-        * * 
-        * * * 
-        * * * *
-        * * * * *
-      </pre>
-      <div class="name-of-pattern">
-        Right Half Pyramid
-      </div>
-    </div>
-    <div class="pattern">
-      <pre>
-        * * * * *
-        * * * * 
-        * * * 
-        * * 
-        * 
-      </pre>
-      <div class="name-of-pattern">
-        Reverse Right Half <span class="space">Pyramid</span>
-      </div>
-    </div>
-    <div class="pattern">
-      <pre>
-               *
-             * *
-           * * *
-         * * * *
-       * * * * *
-      </pre>
-      <div class="name-of-pattern">
-        Left Half Pyramid
-      </div>
-    </div>
-    <div class="pattern">
-      <pre>
-        1
-        2 3
-        4 5 6
-        7 8 9 10 
-      </pre>
-      <div class="name-of-pattern">
-        Number changing <span class="space">Pyramid</span>
-      </div>
-    </div>
-    <div class="pattern">
-      <pre>
-           *
-         *   *
-       *   *   *
-         *   *
-           *
-      </pre>
-      <div class="name-of-pattern">
-        Diamond Pattern
-      </div>
-    </div>
-    <div class="pattern">
-      <pre>
-        1
-        0 1
-        1 0 1
-        0 1 0 1
-        1 0 1 0 1
-      </pre>
-      <div class="name-of-pattern">Zero-one Triangle
-      </div>
-    </div>
-    <div class="pattern">
-      <pre>
-       1 
-       1 2
-       1 2 3
-       1 2 3 4 
-       1 2 3 4 5
-      </pre>
-      <div class="name-of-pattern">
-        Number Increasing <span class="space">Pyramid</span>
-      </div>
-    </div>
-    <div class="pattern">
-      <pre>
-            *
-           * * 
-          * * * 
-         * * * *
-        * * * * *
-      </pre>
-      <div class="name-of-pattern">
-        Triangle Star Pattern
-      </div>
-    </div>
-    <div class="pattern">
-      <pre>
-            1
-          2 1 2
-        3 2 1 2 3
-      4 3 2 1 2 3 4
-    5 4 3 2 1 2 3 4 5
-      </pre>
-      <div class="name-of-pattern">Palindrome Triangle
-      </div>
-    </div>
-    <div class="pattern">
-      <pre>
-       * * * * *
-         * * * *
-           * * *
-             * *
-               *
-      </pre>
-      <div class="name-of-pattern">
-        Reverse Left Half <span class="space">Pyramid</span>
-      </div>
+    <div class="name-of-pattern">
+      <p class="perfect-name">Right Angle Triangle </p>
     </div>
   </div>
 </body>
+<script>
+  function print_pattern(){
+    let x=document.querySelector(".container");
+    x.style.width='500px';
+    x.style.height='400px';
+    x.style.left='450px';
+    let y=document.querySelector(".pattern");
+    y.style.paddingLeft='5%';
+    y.style.height='fit-content';
+    let z=document.querySelector(".name-of-pattern");
+    z.style.position='relative';
+    z.style.top='185px';
+    let r1=document.querySelectorAll(".size");
+    for(let i=0;i<r1.length;i++){
+        r1[i].style.display='inline-block';
+        console.log(r1[i]);
+    }
+    y.style.backgroundColor='rgba(23, 83, 223, 0.2)';
+    let answer_code=document.querySelector(".code");
+    answer_code.innerHTML=`<pre>for(int i=1;i<=n;i++){<br> for(int j=1;j<=n;j++){ <br>   if(i==0||i==n-1||j==0||j==n-1){<br>      printf("*");<br>    }<br>   else{<br>     printf(" ");<br>   } <br> }<br>}<pre>`;
+  }
+  let increase=0,flag=0;
+  function print_sized_pattern(x){
+    if(flag!=1){
+      let x3=document.querySelector(".container");
+    x3.style.height=`${400+increase}px`;
+    let y3=document.querySelector(".pattern");
+    y3.style.paddingLeft='5%';
+    y3.style.height='fit-content';
+      let z=document.querySelector(".name-of-pattern");
+    z.style.position='relative';
+    z.style.top=`${185+((1.4)*increase)}px`;
+    }
+    if(x==8){
+      flag=1;
+    }
+    let print_pattern=document.querySelector(".size_pattern");
+    print_pattern.style.transiton='10s';
+    let x1=``;
+    for(let i=0;i<x;i++){
+      let y1=``;
+      for(let j=0;j<=i;j++){
+        y1+=`* `;
+      }
+      if(i==x-1){
+        x1+=`${y1}`;
+        break;
+      }
+      x1+=`${y1}<br>`;
+    }
+    print_pattern.innerHTML=`${x1}`;
+    increase+=15;
+  }
+</script>
 </html>

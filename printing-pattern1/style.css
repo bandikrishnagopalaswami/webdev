@@ -1,6 +1,6 @@
 header{
   color:white;
-  background-color: rgb(13, 158, 13);
+  background-color: rgb(37, 140, 231);
   padding-top:2px;
   padding-bottom: 2px;
   padding-left: 30px;
@@ -18,43 +18,51 @@ header:hover{
 body{
   background-color: rgb(198, 241, 247);
 }
-.pattern:hover{
-  opacity:0.8;
-}
-.pattern:active{
-  opacity:0.6;
-}
-.home{
-  margin-left:200px;
-  margin-top:50px;
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  column-gap: 80px;
-  row-gap:60px;
-}
-.pattern{
-  width:100%;
-  border-style: solid;
-  border-radius:15px;
-  display: grid;
-  font-size: 15px;
-  grid-template-rows: 65% 35%;
-  border-width:1px;
-  background-color: rgba(13,158,13,0.2);
-  line-height: 20px;
-}
-.name-of-pattern{
-  border-style:none;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  padding-left:26px;
-  background-color:rgb(13,158,13);
-  padding-top: 15px;
-  padding-bottom:10px;
-  font-size: 17px;
-  color:white;
-  border-color:none;
-}
 .space{
   padding-left: 40px;
+}
+.code{
+  color:white;
+  white-space: pre;
+  margin-top:0px;
+  margin-bottom: 0px;
+  transition: all 0.5s;
+}
+pre{
+  margin:10px 0px 0px 0px;
+}
+.size{
+  display:none;
+}
+.container{
+  background-color: rgb(37, 140, 231);
+  color:white;
+  border-style:none;
+  position: relative;
+  left:600px;
+  top:30px;
+  width:200px;
+  height: fit-content;
+  padding:10px 10px 10px 10px;
+  border-style: solid;
+  border-width:1px;
+  border-radius:5px;
+  border-color: rgb(30, 27, 27);
+  display:grid;
+  grid-template-rows: 150px 50px;
+  margin-bottom:100px;
+}
+.pattern{
+  width:90%;
+  border-style: none;
+  height: 100%;
+  padding-left:10%;
+}
+.name-of-pattern{
+  width:90%;
+  padding-left: 10%;
+  border-style: none;
+}
+.size{
+  display: none;
 }
